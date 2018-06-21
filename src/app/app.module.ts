@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component'
 import { ROUTES } from './app.routes';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { RestaurantsService } from './restaurants/restaurants.service';
 
 
 @NgModule({
@@ -29,7 +30,10 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
     //Se estiver no módulo raiz importamos do me´todo forRoot
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS
+    RestaurantsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
