@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -44,7 +44,9 @@ import { ShoppingCartService } from './restaurant-detalhe/shopping-cart/shopping
   providers: [
     //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS
     RestaurantsService,
-    ShoppingCartService
+    ShoppingCartService,
+    //Mudança da linguagem para pt-BR
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
 })
