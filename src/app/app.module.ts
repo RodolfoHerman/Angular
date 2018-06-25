@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +18,9 @@ import { ShoppingCartComponent } from './restaurant-detalhe/shopping-cart/shoppi
 import { MenuItemComponent } from './restaurant-detalhe/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detalhe/reviews/reviews.component';
 import { ShoppingCartService } from './restaurant-detalhe/shopping-cart/shopping-cart.service';
+import { OrderComponent } from './order/order.component';
+
+
 
 
 @NgModule({
@@ -32,14 +35,17 @@ import { ShoppingCartService } from './restaurant-detalhe/shopping-cart/shopping
     MenuComponent,
     ShoppingCartComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule,
     //Se estiver no módulo raiz importamos do me´todo forRoot
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule
+    
   ],
   providers: [
     //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS
