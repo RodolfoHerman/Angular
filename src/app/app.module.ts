@@ -17,6 +17,7 @@ import { MenuComponent } from './restaurant-detalhe/menu/menu.component';
 import { ShoppingCartComponent } from './restaurant-detalhe/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from './restaurant-detalhe/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detalhe/reviews/reviews.component';
+import { ShoppingCartService } from './restaurant-detalhe/shopping-cart/shopping-cart.service';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ReviewsComponent } from './restaurant-detalhe/reviews/reviews.component
   ],
   providers: [
     //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS
-    RestaurantsService
+    RestaurantsService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
