@@ -19,6 +19,7 @@ import { MenuItemComponent } from './restaurant-detalhe/menu-item/menu-item.comp
 import { ReviewsComponent } from './restaurant-detalhe/reviews/reviews.component';
 import { ShoppingCartService } from './restaurant-detalhe/shopping-cart/shopping-cart.service';
 import { OrderComponent } from './order/order.component';
+import { InputComponent } from './shared/input/input.component';
 
 
 
@@ -36,7 +37,8 @@ import { OrderComponent } from './order/order.component';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
