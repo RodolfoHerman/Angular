@@ -370,5 +370,27 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "address": "Rua Águas de MArço",
+      "number": "210",
+      "optionalAddress": "",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "sunday"
+        },
+        {
+          "quantity": 1,
+          "menuId": "chocpop"
+        },
+        {
+          "quantity": 1,
+          "menuId": "icestd.png"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }
