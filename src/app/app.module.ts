@@ -22,6 +22,7 @@ import { OrderComponent } from './order/order.component';
 import { InputComponent } from './shared/input/input.component';
 import { RadioComponent } from './shared/radio/radio.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
+import { OrderService } from './order/order.service';
 
 
 
@@ -58,7 +59,8 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
     RestaurantsService,
     ShoppingCartService,
     //Mudança da linguagem para pt-BR
-    { provide: LOCALE_ID, useValue: 'pt-BR' }
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    OrderService
   ],
   bootstrap: [AppComponent]
 })
