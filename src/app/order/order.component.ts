@@ -9,6 +9,9 @@ import { CartItem } from '../restaurant-detalhe/shopping-cart/cart-item.model';
 })
 export class OrderComponent implements OnInit {
 
+  //Em uma palicação real estariamos realizando a requisição do valor do frete no backend
+  delivery: number = 8; 
+  
   paymentOptions: RadioOption[] = [
     {label: 'Dinheiro', value: 'MON'},
     {label: 'Cartão de Débito', value: 'DEB'},
@@ -18,6 +21,11 @@ export class OrderComponent implements OnInit {
   constructor(private orderService: OrderService) { }
 
   ngOnInit() {
+  }
+
+  itemsValue(): number {
+
+    return this.orderService.itemsValue();
   }
 
   cartItems(): CartItem[] {
