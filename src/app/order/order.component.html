@@ -5,8 +5,8 @@
 <section class="content">
   <section class="invoice">
 
-    <!-- {{ form.valid }}
-    {{ form.value | json }} -->
+    {{ orderForm.valid }}
+    {{ orderForm.value | json }}
 
     <!-- novalidate é um atributo do HTML5 significa que o dado não deve ser validado pelo browser (ficará a cargo do Angular) -->
     <form [formGroup]="orderForm" novalidate>
@@ -139,7 +139,7 @@
     <div class="row">
       <div class="col-xs-12">
         <button href="order-summary.html" [disabled]="!orderForm.valid || cartItems().length === 0" class="btn btn-success pull-right"
-          (click)="checkOrder(OrderForm.value)"
+          (click)="checkOrder(orderForm.value)"
         >
           <i class="fa fa-credit-card"></i> Concluir Pedido
         </button>
