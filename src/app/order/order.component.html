@@ -5,8 +5,8 @@
 <section class="content">
   <section class="invoice">
 
-    {{ orderForm.valid }}
-    {{ orderForm.value | json }}
+    <!-- {{ orderForm.valid }}
+    {{ orderForm.value | json }} -->
 
     <!-- novalidate é um atributo do HTML5 significa que o dado não deve ser validado pelo browser (ficará a cargo do Angular) -->
     <form [formGroup]="orderForm" novalidate>
