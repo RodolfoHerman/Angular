@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -57,8 +57,8 @@ import { RatingComponent } from './shared/rating/rating.component';
     RouterModule,
     //Se estiver no módulo raiz importamos do me´todo forRoot
     RouterModule.forRoot(ROUTES),
-    FormsModule
-    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ContentChild, AfterContentInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { NgModel, FormControlName } from '@angular/forms';
 
 @Component({
   selector: 'mt-input-container',
@@ -14,6 +14,8 @@ export class InputComponent implements OnInit, AfterContentInit {
 
   //Angular será capaz de injetar uma referência para essa diretiva, ou seja, o input da página "order.component.html" será injetado. Obs: necessário possuir a diretiva 'ngModel' no input
   @ContentChild(NgModel) model: NgModel;
+  //Reactive forms (FormControlName) possui os mesmos métodos do NgModel
+  @ContentChild(FormControlName) control: FormControlName;
   
   constructor() { }
 
@@ -24,11 +26,11 @@ export class InputComponent implements OnInit, AfterContentInit {
   ngAfterContentInit() {
 
     //Injetando o input da página "order.component.html"
-    this.input = this.model;
+    this.input = this.model || this.control;
 
     if(this.input === undefined) {
 
-      throw new Error("Esse componente precisa ser usado com um diretiva ngModel");
+      throw new Error("Esse componente precisa ser usado com um diretiva ngModel ou formControlName");
     }
 
   }
