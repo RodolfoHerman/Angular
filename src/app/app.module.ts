@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -37,8 +37,9 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     HttpModule,
     RouterModule,
-    //Se estiver no módulo raiz importamos do me´todo forRoot
-    RouterModule.forRoot(ROUTES),
+    //Se estiver no módulo raiz importamos do método forRoot. PreloadAllModules é a estratégia para acerragor os módulos
+    //em backgroung quando os módulos principais são acarregados
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
     SharedModule, 
     CoreModule
   ],
