@@ -9,16 +9,14 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
-import { RestaurantsService } from './restaurants/restaurants.service';
 import { RestaurantDetalheComponent } from './restaurant-detalhe/restaurant-detalhe.component';
 import { MenuComponent } from './restaurant-detalhe/menu/menu.component';
 import { ShoppingCartComponent } from './restaurant-detalhe/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from './restaurant-detalhe/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detalhe/reviews/reviews.component';
-import { ShoppingCartService } from './restaurant-detalhe/shopping-cart/shopping-cart.service';
-import { OrderService } from './order/order.service';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -41,15 +39,16 @@ import { SharedModule } from './shared/shared.module';
     RouterModule,
     //Se estiver no módulo raiz importamos do me´todo forRoot
     RouterModule.forRoot(ROUTES),
-    SharedModule
+    SharedModule, 
+    CoreModule
   ],
   providers: [
     //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS
-    RestaurantsService,
-    ShoppingCartService,
+    //RestaurantsService,
+    //ShoppingCartService,
     //Mudança da linguagem para pt-BR
     { provide: LOCALE_ID, useValue: 'pt-BR' },
-    OrderService
+    //OrderService
   ],
   bootstrap: [AppComponent]
 })
