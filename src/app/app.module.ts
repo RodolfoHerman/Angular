@@ -3,6 +3,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -41,7 +42,8 @@ import { CoreModule } from './core/core.module';
     //em backgroung quando os módulos principais são acarregados
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
     SharedModule, 
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [
     //Informando um SERVICE no providers toda a aplicação terá acesso. Obs: services são SINGLETONS
