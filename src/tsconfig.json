@@ -3,8 +3,10 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
+    "strict": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noStrictGenericChecks": true,
     "lib": [
       "es2016",
       "dom"
