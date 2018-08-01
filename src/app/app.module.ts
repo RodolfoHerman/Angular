@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -53,6 +54,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     //ShoppingCartService,
     //Mudança da linguagem para pt-BR
     { provide: LOCALE_ID, useValue: 'pt-BR' },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
     //OrderService
   ],
   bootstrap: [AppComponent]
