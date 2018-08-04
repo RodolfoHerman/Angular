@@ -1,0 +1,33 @@
+// {
+//     "compileOnSave": true,
+//     "compilerOptions": {
+//         "outDir": "dist",
+//         "target": "es5",
+//         "module": "es2015",
+//         "typeRoots": [
+//             "../node_modules/@types"
+//         ]
+//     }
+// }
+
+
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "./dist",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        //Carregador de MODULOS
+        "module": "system",
+        //Uma boa prática de programação é não permitir valores UNDEFINED e NULL
+        "strictNullChecks": true,
+        "experimentalDecorators": true,
+        "typeRoots": [
+          "../node_modules/@types"
+        ]
+    },
+    "include": [
+        "./backend/**/*"
+    ]
+}
